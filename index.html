@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drew Woodhouse | JS Array</title>
+
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Jost:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="container">
+            <header>
+                <h1 class="page-heading">Image to Email Assigner</h1>
+                <h2 class="page-subheading">Find a random image</h2>
+                <h2 class="page-subheading">Enter your email address</h2>
+                <h2 class="page-subheading">Assign your image to your email address</h2>
+                <h2 class="page-subheading">Simplez</h2>
+            </header>
+            <main>
+                <div class="content-container">
+                    <div class="image-fetcher">
+                        <h3>Image Fetcher</h3>
+                        <div id="image-fetcher__image-container">
+                            <!--<img src="" alt="fetched image">-->
+                        </div>
+                        <button type="button" id="random-img">Another Image</button>
+                    </div>
+                    <div class="right-side">
+                        <div class="email-inputter">
+                            <h3>Add an email address:</h3>
+                            <input type="email" placeholder="Enter an e-mail address">
+                            <button type="button">Add Email</button>
+                        </div>
+                        <div class="email-displayer">
+                            <h3>Insert entered email address name here</h3>
+                            <h3>Select an email address:</h3>
+                            <select id="email-address-dropdown">
+                                <option>Please select an email address.</option>
+                                <option>Email Addresses from input</option>
+                            </select>
+                            <button type="button">Add Current Image</button>
+                            <h3>Assigned Images to this email:</h3>
+                            <img src="" alt="saved image">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </main>
+        </div>
+        
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/imageFetch.js"></script>
+</body>
+</html>

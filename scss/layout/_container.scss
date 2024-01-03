@@ -1,0 +1,41 @@
+// ==========================================================================
+// Containers
+// ==========================================================================
+
+#container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &::before {
+        content: " ";
+        display: table;
+    }
+
+    @include viewport(medium) {
+        width: 750px;
+    }
+
+    @include viewport(large) {
+        width: 970px;
+    }
+
+    @include viewport(x-large) {
+        width: 1200px;
+    }
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid black;
+    border-radius: .5rem;
+}

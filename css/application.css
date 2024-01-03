@@ -1,0 +1,95 @@
+/* line 5, D:/Documents/GitHub/Js-Array/scss/base/_normalize.scss */
+html {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #DDD0C8;
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+#container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 18, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+.container::before {
+  content: " ";
+  display: table;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  .container {
+    width: 1200px;
+  }
+}
+
+/* line 36, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  border-radius: .5rem;
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_header.scss */
+.page-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* line 10, D:/Documents/GitHub/Js-Array/scss/layout/_header.scss */
+.page-subheading {
+  text-align: center;
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+.image-fetcher {
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid red;
+}
+
+/* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 17, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+.email-inputter {
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid red;
+}
+
+/* line 23, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+.email-displayer {
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid red;
+}
+
+/*# sourceMappingURL=application.css.map */
