@@ -32,15 +32,15 @@
                     <div class="right-side">
                         <div class="email-inputter">
                             <h3>Add an email address:</h3>
-                            <input type="email" placeholder="Enter an e-mail address">
-                            <button type="button">Add Email</button>
+                            <input id="textfield_add-email" type="email" placeholder="Enter an e-mail address">
+                            <small></small>
+                            <button id="btn_add-email" type="button">Add Email</button>
                         </div>
                         <div class="email-displayer">
-                            <h3>Insert entered email address name here</h3>
+                            <h3 id="current-email-text">Enter an email address above</h3>
                             <h3>Select an email address:</h3>
                             <select id="email-address-dropdown">
-                                <option>Please select an email address.</option>
-                                <option>Email Addresses from input</option>
+                                <option>Please select an email address.</option> 
                             </select>
                             <button type="button">Add Current Image</button>
                             <h3>Assigned Images to this email:</h3>
@@ -51,11 +51,24 @@
                 </div>
                 
             </main>
+            <div class="toast">
+                <div class="toast-content">
+                    <i id="toast-circle" class="fas fa-solid icon-check check"></i>
+                    <div class="message">
+                        <span class="text text-1">Success</span>
+                        <span class="text text-2">Email Address Added!</span>
+                    </div>
+                </div>
+                <i class="fa-solid icon-x close"></i>
+                <div class="progress active"></div>
+            </div>
         </div>
         
     </div>
     
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/imageFetch.js"></script>
+    <script src="js/emailPopulator.js"></script>
 </body>
 </html>

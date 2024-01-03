@@ -1,17 +1,25 @@
-/* line 5, D:/Documents/GitHub/Js-Array/scss/base/_normalize.scss */
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_normalize.scss */
 html {
   font-family: 'DM Sans', sans-serif;
   background-color: #DDD0C8;
 }
 
-/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 #container {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
-/* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+/* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -19,34 +27,34 @@ html {
   padding-right: 15px;
 }
 
-/* line 18, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+/* line 18, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 .container::before {
   content: " ";
   display: table;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .container {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1259px) {
-  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .container {
     width: 970px;
   }
 }
 
 @media (min-width: 1260px) {
-  /* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+  /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .container {
     width: 1200px;
   }
 }
 
-/* line 36, D:/Documents/GitHub/Js-Array/scss/layout/_container.scss */
+/* line 36, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -54,42 +62,195 @@ html {
   border-radius: .5rem;
 }
 
-/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_header.scss */
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_header.scss */
 .page-heading {
   font-size: 3rem;
   text-align: center;
 }
 
-/* line 10, D:/Documents/GitHub/Js-Array/scss/layout/_header.scss */
+/* line 10, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_header.scss */
 .page-subheading {
   text-align: center;
 }
 
-/* line 5, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .image-fetcher {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid red;
 }
 
-/* line 12, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+/* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .right-side {
   display: flex;
   flex-direction: column;
 }
 
-/* line 17, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+/* line 17, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .email-inputter {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid red;
 }
 
-/* line 23, D:/Documents/GitHub/Js-Array/scss/layout/_main.scss */
+/* line 23, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .email-displayer {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid red;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?2jvoes");
+  src: url("../fonts/icomoon.eot?2jvoes#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2jvoes") format("truetype"), url("../fonts/icomoon.woff?2jvoes") format("woff"), url("../fonts/icomoon.svg?2jvoes#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* line 17, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 32, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_icons.scss */
+.icon-check:before {
+  content: "\e901";
+}
+
+/* line 35, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_icons.scss */
+.icon-x:before {
+  content: "\e900";
+}
+
+/* line 4, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast {
+  position: absolute;
+  top: 35%;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* line 17, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast.active {
+  transform: translateX(0%);
+}
+
+/* line 21, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+
+/* line 26, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 35px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+/* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+/* line 44, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* line 50, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.message .text.text-1 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* line 55, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* line 64, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast .close:hover {
+  opacity: 1;
+}
+
+/* line 68, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+/* line 77, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+}
+
+/* line 87, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.progress.active:before {
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+/* line 97, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+.toast.active ~ button {
+  pointer-events: none;
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_textfield.scss */
+.success {
+  background-color: green;
+}
+
+/* line 9, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_textfield.scss */
+.error {
+  background-color: red;
 }
 
 /*# sourceMappingURL=application.css.map */
