@@ -5,6 +5,7 @@
 const imageContainer = document.getElementById("image-fetcher__image-container");
 const btnRandomImage = document.getElementById("random-img");
 const apiKey = 'tJTJmyfzjWKJEFP4tUYl3hQTTCLEPHtvnoQv3yvWp9k';
+const apiURL = 'https://api.unsplash.com/photos/random?client_id=';
 
 function fetchData(url) {
     return fetch(url)
@@ -12,8 +13,8 @@ function fetchData(url) {
             
 }
 
-fetchData(`https://api.unsplash.com/photos/random?client_id=${apiKey}`)
-    .then(data => generateImage(data.message))
+fetchData(`${apiURL}${apiKey}`)
+    .then(data => generateImage(data.urls.small))
 
 
 function generateImage(data) {
@@ -25,14 +26,13 @@ function fetchImage() {
     const img = imageContainer.querySelector("img");
 
 
-    fetchData(`https://api.unsplash.com/photos/random?client_id=${apiKey}`)
+    fetchData(`${apiURL}${apiKey}`)
         .then(data => {
-            if (!data.ok) {
-                console.log(data);
-                throw new Error("HTTP Error, Status: " + data.status);
-            }
-            img.src = data.message;
-            img.alt = "random image";
+            console.log(data);
+            img.src = data.urls.small; 
+            img.alt = data.alt_description;
+            img.height = 200;
+            img.width = 200;
         })
 }
 
