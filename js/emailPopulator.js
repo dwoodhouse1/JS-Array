@@ -2,6 +2,9 @@ const btnAddEmail = document.getElementById("btn_add-email");
 const emailTextField = document.getElementById("textfield_add-email");
 const emailDropdown = document.getElementById("email-address-dropdown")
 const currentEmailText = document.getElementById("current-email-text");
+const btnAddImage = document.getElementById("btn_add-image");
+
+let userArray = [];
 
 function populateDropdown() {
     //alert("test");
@@ -10,10 +13,11 @@ function populateDropdown() {
         let newOption = document.createElement("OPTION");
         let newOptionVal = document.createTextNode(text);
         
-    
+        createUser(text);
+        
         newOption.appendChild(newOptionVal);
         emailDropdown.insertBefore(newOption, emailDropdown.lastChild);
-        emailTextField.value = null;
+        emailTextField.value = null; // resets the textfield to blank
     }
 }
 
@@ -21,6 +25,8 @@ function populateEmailText() {
     let dropDownValue = emailDropdown.options[emailDropdown.selectedIndex].value;
     currentEmailText.textContent = dropDownValue;
 }
+
+
 
 const showError = (input, message) => {
     
@@ -141,4 +147,45 @@ function generateToast(title, desc)
 }      
 
 btnAddEmail.addEventListener('click', populateDropdown);
+btnAddImage.addEventListener('click', function () {
+    document.querySelector(".image-displayer").innerHTML = `
+    <ul>
+        ${addImage(userArray)}
+    </ul>
+    `;
+});
+
 emailDropdown.addEventListener('change', populateEmailText);
+
+function createUser(userEmail) {
+    let user = {
+        email: `${userEmail}`,
+        images: []
+    };
+    userArray.push(user);
+    console.log(user);
+}
+
+function addImage(arr) {
+    let html = "";
+
+    if (arr.length === 0)
+    {
+        alert("Error, no emails have been entered");
+        html = "";
+    }
+    else
+    {
+       
+
+        for (let i = 0; i < arr.length; i++)
+        {
+            html += `<li>${arr[i].email}</li>`
+            console.log(html);
+        }
+        return html;
+    }
+
+    
+}
+

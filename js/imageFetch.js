@@ -7,18 +7,22 @@ const btnRandomImage = document.getElementById("random-img");
 const apiKey = 'tJTJmyfzjWKJEFP4tUYl3hQTTCLEPHtvnoQv3yvWp9k';
 const apiURL = 'https://api.unsplash.com/photos/random?client_id=';
 
-function fetchData(url) {
+let imageList = [];
+
+function fetchData(url) { // returns a promise once data is retrieved from the web server and passed as json
     return fetch(url)
+        .then(checkStatus)
         .then(response => response.json())
-            
+        .then(json => imageList = json)
+        .catch(error => console.log("Error, there was a problem", error))    
 }
 
-fetchData(`${apiURL}${apiKey}`)
-    .then(data => generateImage(data.urls.small))
+fetchData(`${apiURL}${apiKey}`) // full URL: https://api.unsplash.com/photos/random?client_id=tJTJmyfzjWKJEFP4tUYl3hQTTCLEPHtvnoQv3yvWp9k
+    .then(data => generateImage(data.urls.small, data.alt_description))
+    
 
-
-function generateImage(data) {
-    const html = `<img src='${data}' alt>`;
+function generateImage(data, desc) { // Original Image on page load
+    const html = `<img src='${data}' alt='${desc}' height='200' width='200'>`;
     imageContainer.innerHTML = html;
 }
 
@@ -34,6 +38,17 @@ function fetchImage() {
             img.height = 200;
             img.width = 200;
         })
+}
+
+function checkStatus(response) {
+    if (response.ok) 
+    {
+        return Promise.resolve(response);
+    }
+    else
+    {
+        return Promise.reject(new Error(response.statusText));
+    }
 }
 
 btnRandomImage.addEventListener('click', fetchImage);
