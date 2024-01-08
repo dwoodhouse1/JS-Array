@@ -10,6 +10,9 @@
     margin-top: 25px;
     cursor: pointer;
 
+    &-open {
+        margin-top: 3px;
+    }
     &:hover {
         background-color: #d5d5d5;
     }
@@ -38,7 +41,5 @@
 }
 
 button:disabled {
-    color: #a6b4b9;
-    border-color: #a6b4b9;
     cursor: not-allowed;
 }

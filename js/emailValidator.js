@@ -61,7 +61,6 @@ function checkExistingEmail(emailText) {
         console.log(userArray[i].email);
         if (userArray[i].email === emailText)
         {
-            console.log("ALERT EMAIL IS SAME AS EXISTING ONE")
             return true;
         }
     }
