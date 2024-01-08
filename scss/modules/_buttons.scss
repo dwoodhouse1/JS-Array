@@ -1,3 +1,13 @@
 // ==========================================================================
 // Buttons
 // ==========================================================================
+
+.button {
+    border-radius: .5em;
+    border: red solid;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    margin-top: 25px;
+
+    cursor: pointer;
+}

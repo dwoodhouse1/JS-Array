@@ -6,10 +6,26 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+/* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+ul {
+  padding-left: 0;
+}
+
+/* line 15, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+li {
+  list-style: none;
+}
+
+/* line 19, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+h3 {
+  margin-bottom: 5px;
+}
+
 /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_normalize.scss */
 html {
   font-family: 'DM Sans', sans-serif;
   background-color: #DDD0C8;
+  box-sizing: border-box;
 }
 
 /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
@@ -60,6 +76,23 @@ html {
   justify-content: space-between;
   border: 3px solid black;
   border-radius: .5rem;
+  font-size: 24px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 36, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 36, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_header.scss */
@@ -98,6 +131,16 @@ html {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid red;
+}
+
+/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
+.button {
+  border-radius: .5em;
+  border: red solid;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 @font-face {
@@ -148,18 +191,32 @@ html {
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 }
 
-/* line 17, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 4, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+  .toast {
+    top: 62.5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 4, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+  .toast {
+    top: 62.5%;
+  }
+}
+
+/* line 25, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast.active {
   transform: translateX(0%);
 }
 
-/* line 21, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 29, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast .toast-content {
   display: flex;
   align-items: center;
 }
 
-/* line 26, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 34, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast-content .check {
   display: flex;
   align-items: center;
@@ -172,27 +229,27 @@ html {
   border-radius: 50%;
 }
 
-/* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 46, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast-content .message {
   display: flex;
   flex-direction: column;
   margin: 0 20px;
 }
 
-/* line 44, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 52, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .message .text {
   font-size: 16px;
   font-weight: 400;
   color: #666666;
 }
 
-/* line 50, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 58, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .message .text.text-1 {
   font-weight: 600;
   color: #333;
 }
 
-/* line 55, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 63, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast .close {
   position: absolute;
   top: 10px;
@@ -202,12 +259,12 @@ html {
   opacity: 0.7;
 }
 
-/* line 64, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 72, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast .close:hover {
   opacity: 1;
 }
 
-/* line 68, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 76, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast .progress {
   position: absolute;
   bottom: 0;
@@ -216,7 +273,7 @@ html {
   width: 100%;
 }
 
-/* line 77, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 85, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast .progress:before {
   content: "";
   position: absolute;
@@ -227,7 +284,7 @@ html {
   background-color: #4070f4;
 }
 
-/* line 87, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 95, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .progress.active:before {
   animation: progress 5s linear forwards;
 }
@@ -238,7 +295,7 @@ html {
   }
 }
 
-/* line 97, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
+/* line 105, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_toast.scss */
 .toast.active ~ button {
   pointer-events: none;
 }
