@@ -1,9 +1,5 @@
-//https://picsum.photos/200/300
-//https://dog.ceo/api/breeds/image/random
-//'https://api.unsplash.com/photos/random'
-
 const imageContainer = document.getElementById("image-fetcher__image-container");
-const btnRandomImage = document.getElementById("random-img");
+const btnRandomImage = document.getElementById("btn_random-img");
 const apiKey = 'tJTJmyfzjWKJEFP4tUYl3hQTTCLEPHtvnoQv3yvWp9k';
 const apiURL = 'https://api.unsplash.com/photos/random?client_id=';
 

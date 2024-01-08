@@ -2,10 +2,30 @@
 // Textfield
 // ==========================================================================
 
-.success {
-    background-color: green;
+input {
+    &:focus {
+        outline: none;
+    }
 }
 
-.error {
-    background-color: red;
+
+.textfield_add-email {
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: lightgrey;
+    color: #606060;
+    border: 2px solid #4a4c59;
+    border-radius: 2px;
+}
+
+#email-address-dropdown {
+    font-family: 'DM Sans', sans-serif;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: lightgrey;
+    color: #606060;
+    border: 2px solid #4a4c59;
+    border-radius: 2px;
 }

@@ -5,23 +5,35 @@
 .image-fetcher {
     padding: 1rem;
     margin: 1rem;
-    border: 3px solid red;
-
+    border: 3px solid black;
+    border-radius: 6px;
+    background-color: #dfd2d4;
+    height: 350px;
 }
 
 .right-side {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 
 .email-inputter {
     padding: 1rem;
     margin: 1rem;
-    border: 3px solid red;
+    border: 3px solid black;
+    border-radius: 6px;
+    background-color: #dfd2d4
 }
 
 .email-displayer {
     padding: 1rem;
     margin: 1rem;
-    border: 3px solid red;
+    border: 3px solid black;
+    border-radius: 6px;
+    background-color: #dfd2d4
+}
+
+.current-email-text {
+    margin-bottom: 20px;
 }

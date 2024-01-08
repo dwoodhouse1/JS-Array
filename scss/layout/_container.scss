@@ -20,6 +20,10 @@
         display: table;
     }
 
+    @include viewport(small) {
+        width: 200px;
+    }
+
     @include viewport(medium) {
         width: 750px;
     }
@@ -35,18 +39,26 @@
 
 .content-container {
     display: flex;
-    justify-content: space-between;
-    border: 3px solid black;
-    border-radius: .5rem;
+    justify-content: center;
     font-size: 24px;
 
     @include viewport(small) {
         flex-direction: column;
         align-items: center;
+        width: 200px;
     }
 
     @include viewport(medium) {
         flex-direction: column;
         align-items: center;
+        width: 750px;
+    }
+
+    @include viewport(large) {
+        width: 970px;
+    }
+
+    @include viewport(x-large) {
+        width: 1200px;
     }
 }

@@ -4,10 +4,41 @@
 
 .button {
     border-radius: .5em;
-    border: red solid;
+    border: black solid;
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     margin-top: 25px;
-
     cursor: pointer;
+
+    &:hover {
+        background-color: #d5d5d5;
+    }
+}
+
+#btn_random-img {
+    width: 14rem;
+}
+
+#btn_add-email {
+    width: 11rem;
+
+    @include viewport(small) {
+        width: 12rem;
+        font-size: 20px;
+    }
+}
+
+#btn_add-image {
+    width: 18rem;
+
+    @include viewport(small) {
+        width: 12rem;
+        font-size: 20px;
+    }
+}
+
+button:disabled {
+    color: #a6b4b9;
+    border-color: #a6b4b9;
+    cursor: not-allowed;
 }

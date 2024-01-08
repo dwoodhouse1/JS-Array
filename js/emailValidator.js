@@ -3,10 +3,9 @@ const emailTextField = document.getElementById("textfield_add-email");
 
 const showError = (input, message) => {
     
-
-    //adding error class
-    emailTextField.classList.remove("success");
-    emailTextField.classList.add("error");
+    
+    //making the border red when email is incorrect format
+    $(".textfield_add-email").css("border-color", "red");
 
     //displays the error message in the small tag
     const error = document.querySelector("small");
@@ -16,10 +15,9 @@ const showError = (input, message) => {
 const showSuccess = (input) => {
     //get the form-field element
     
-
-    //remove the success class
-    emailTextField.classList.remove("error");
-    emailTextField.classList.add("success");
+    
+    //making the border green when email is correct format
+    $(".textfield_add-email").css("border-color", "green");
 
     //hide the error message
     const error = document.querySelector("small");
@@ -35,16 +33,15 @@ const checkEmail = () => {
     let valid = false;
 
     const email = emailTextField.value.trim();
-
     
-    if (!isEmailValid(email))
-    {
-        showError(emailTextField, "Email format invalid");
-    }
-    else
+    if (isEmailValid(email) && !checkExistingEmail(email))
     {
         showSuccess(emailTextField);
         valid = true;
+    }
+    else 
+    {
+        showError(emailTextField, "Email format invalid or it already exists");
     }
     return valid;
 }
@@ -57,3 +54,16 @@ emailTextField.addEventListener("input", function (e){
             break; 
     }
 })
+
+function checkExistingEmail(emailText) {
+    for (let i = 0; i < userArray.length; i++)
+    {
+        console.log(userArray[i].email);
+        if (userArray[i].email === emailText)
+        {
+            console.log("ALERT EMAIL IS SAME AS EXISTING ONE")
+            return true;
+        }
+    }
+    return false;
+}

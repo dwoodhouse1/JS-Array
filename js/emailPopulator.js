@@ -82,7 +82,6 @@ function addImage(emailText) {
                 
                 fetchImage(); // Refreshes the Image Fetcher with a new image once the current image is stored.
             }
-            
         }
     }
     

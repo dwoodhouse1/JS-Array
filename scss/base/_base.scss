@@ -18,4 +18,18 @@ li {
 
 h3 {
     margin-bottom: 5px;
+    margin-top: 5px;
+
+    @include viewport(small) {
+        font-size: 2rem;
+    }
+}
+
+img {
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.space-between {
+    padding-top: 30px;
 }
