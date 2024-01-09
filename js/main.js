@@ -4,12 +4,12 @@ $(".page-heading, .page-subheading-one, .page-subheading-two, .page-subheading-t
 
 $(document).ready(function() {
     $(".page-heading").delay(100).fadeIn("slow");
-    $(".page-subheading-one").delay(1000).fadeIn("slow");
-    $(".page-subheading-two").delay(2000).fadeIn("slow");
-    $(".page-subheading-three").delay(3000).fadeIn("slow");
-    $(".page-subheading-four").delay(4000).fadeIn("slow");
+    $(".page-subheading-one").delay(600).fadeIn("slow");
+    $(".page-subheading-two").delay(1100).fadeIn("slow");
+    $(".page-subheading-three").delay(1600).fadeIn("slow");
+    $(".page-subheading-four").delay(2100).fadeIn("slow");
    
-    $(".button-open").delay(5000).fadeIn("slow");
+    $(".button-open").delay(2600).fadeIn("slow");
 })
 
 btnOpen.addEventListener('click', showContent);
