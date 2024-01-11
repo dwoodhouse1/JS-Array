@@ -9,44 +9,64 @@
 /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 ul {
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* line 15, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+  ul {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1260px) {
+  /* line 12, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+  ul {
+    flex-direction: row;
+  }
+}
+
+/* line 26, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 li {
   list-style: none;
+  margin: 20px;
 }
 
-/* line 19, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+/* line 31, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 h2 {
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
-/* line 24, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+/* line 37, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 h3 {
   margin-bottom: 5px;
   margin-top: 5px;
+  text-align: center;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  /* line 24, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+  /* line 37, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
   h3 {
     font-size: 2rem;
   }
 }
 
-/* line 33, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+/* line 47, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 img {
   border: 3px solid black;
   border-radius: 6px;
 }
 
-/* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+/* line 52, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 .space-between {
   padding-top: 30px;
 }
 
-/* line 42, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
+/* line 56, D:/Documents/GitHub/Js-Array/JS-Array/scss/base/_base.scss */
 #header-content {
   display: flex;
   flex-direction: column;
@@ -71,11 +91,9 @@ html {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
-/* line 18, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+/* line 16, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 .container::before {
   content: " ";
   display: table;
@@ -109,7 +127,7 @@ html {
   }
 }
 
-/* line 40, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+/* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
 .content-container {
   display: flex;
   justify-content: center;
@@ -117,7 +135,7 @@ html {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  /* line 40, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  /* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .content-container {
     flex-direction: column;
     align-items: center;
@@ -126,7 +144,7 @@ html {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 40, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  /* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .content-container {
     flex-direction: column;
     align-items: center;
@@ -135,14 +153,14 @@ html {
 }
 
 @media (min-width: 992px) and (max-width: 1259px) {
-  /* line 40, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  /* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .content-container {
     width: 970px;
   }
 }
 
 @media (min-width: 1260px) {
-  /* line 40, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
+  /* line 38, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_container.scss */
   .content-container {
     width: 1200px;
   }
@@ -160,71 +178,216 @@ html {
 }
 
 /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
-.image-fetcher {
-  padding: 1rem;
-  margin: 1rem;
-  border: 3px solid black;
-  border-radius: 6px;
-  background-color: #dfd2d4;
-  height: 350px;
-}
-
-/* line 14, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .right-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* line 21, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+/* line 11, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.image-fetcher {
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid black;
+  border-radius: 6px;
+  background-color: #dfd2d4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  width: 250px;
+}
+
+/* line 19, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.image-fetcher h3 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1260px) {
+  /* line 11, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .image-fetcher {
+    width: 250px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* line 11, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .image-fetcher {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 11, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .image-fetcher {
+    width: 650px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 36, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .image-fetcher h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 42, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .email-inputter {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid black;
   border-radius: 6px;
   background-color: #dfd2d4;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
 }
 
-/* line 29, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+/* line 49, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.email-inputter h3 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1260px) {
+  /* line 42, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-inputter {
+    width: 530px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* line 42, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-inputter {
+    width: 530px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 42, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-inputter {
+    width: 650px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 66, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-inputter h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 72, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
 .email-displayer {
   padding: 1rem;
   margin: 1rem;
   border: 3px solid black;
   border-radius: 6px;
   background-color: #dfd2d4;
-}
-
-/* line 37, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
-.current-email-text {
-  margin-bottom: 20px;
-}
-
-/* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_email-input.scss */
-.email-inputter {
   display: flex;
   flex-direction: column;
-  width: 225px;
+  width: 250px;
+}
+
+/* line 79, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.email-displayer h3 {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1260px) {
-  /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_email-input.scss */
-  .email-inputter {
-    width: 532px;
+  /* line 72, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-displayer {
+    width: 530px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1259px) {
-  /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_email-input.scss */
-  .email-inputter {
-    width: 532px;
+  /* line 72, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-displayer {
+    width: 530px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_email-input.scss */
-  .email-inputter {
-    width: 532px;
+  /* line 72, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-displayer {
+    width: 650px;
   }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 96, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-displayer h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 102, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.email-image-displayer {
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid black;
+  border-radius: 6px;
+  background-color: #dfd2d4;
+}
+
+/* line 105, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.email-image-displayer h3 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1260px) {
+  /* line 102, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-image-displayer {
+    width: 530px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* line 102, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-image-displayer {
+    width: 530px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 102, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-image-displayer {
+    width: 650px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 122, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  .email-image-displayer h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 128, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+#assigned-image-text {
+  text-align: center;
+}
+
+/* line 132, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+#image-fetcher-text {
+  text-align: center;
+}
+
+/* line 136, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+#select-email-text {
+  text-align: left;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 136, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+  #select-email-text {
+    text-align: center;
+  }
+}
+
+/* line 144, D:/Documents/GitHub/Js-Array/JS-Array/scss/layout/_main.scss */
+.current-email-text {
+  margin-bottom: 20px;
 }
 
 /* line 5, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
@@ -262,25 +425,28 @@ html {
   #btn_add-email {
     width: 12rem;
     font-size: 20px;
+    align-self: center;
   }
 }
 
-/* line 34, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
+/* line 35, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
 #btn_add-image {
   width: 18rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  /* line 34, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
+  /* line 35, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
   #btn_add-image {
     width: 12rem;
     font-size: 20px;
+    align-self: center;
   }
 }
 
-/* line 43, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
+/* line 45, D:/Documents/GitHub/Js-Array/JS-Array/scss/modules/_buttons.scss */
 button:disabled {
   cursor: not-allowed;
+  border-color: grey;
 }
 
 @font-face {

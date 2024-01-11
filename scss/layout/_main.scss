@@ -2,36 +2,143 @@
 // Main Content
 // ==========================================================================
 
-.image-fetcher {
-    padding: 1rem;
-    margin: 1rem;
-    border: 3px solid black;
-    border-radius: 6px;
-    background-color: #dfd2d4;
-    height: 350px;
-}
-
 .right-side {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+.image-fetcher {
+    @include contentContainer();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    width: 250px;
+
+    & h3 {
+        margin-bottom: 1rem;
+    }
+
+    @include viewport(x-large) {
+        width: 250px;
+    }
+
+    @include viewport(large) {
+        width: 250px;
+    }
+
+    @include viewport(medium) {
+        width: 650px;
+    }
+
+    @include viewport(small) {
+        h3 {
+            font-size: 1.5rem; 
+        }
+    }
 }
 
 .email-inputter {
-    padding: 1rem;
-    margin: 1rem;
-    border: 3px solid black;
-    border-radius: 6px;
-    background-color: #dfd2d4
+    @include contentContainer();
+
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    & h3 {
+        margin-bottom: 1rem;
+    }
+    
+    @include viewport(x-large) {
+        width: 530px;
+    }
+
+    @include viewport(large) {
+        width: 530px;
+    }
+
+    @include viewport(medium) {
+        width: 650px;
+    }
+
+    @include viewport(small) {
+        h3 {
+            font-size: 1.5rem; 
+        }
+    }
 }
 
 .email-displayer {
-    padding: 1rem;
-    margin: 1rem;
-    border: 3px solid black;
-    border-radius: 6px;
-    background-color: #dfd2d4
+    @include contentContainer();
+
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    & h3 {
+        margin-bottom: 1rem;
+    }
+
+    @include viewport(x-large) {
+        width: 530px;
+    }
+
+    @include viewport(large) {
+        width: 530px;
+    }
+
+    @include viewport(medium) {
+        width: 650px;
+    }
+
+    @include viewport(small) {
+        h3 {
+            font-size: 1.5rem; 
+        }
+    }
+}
+
+.email-image-displayer {
+    @include contentContainer();
+
+    & h3 {
+        margin-bottom: 1rem;
+    }
+
+    @include viewport(x-large) {
+        width: 530px;
+    }
+
+    @include viewport(large) {
+        width: 530px;
+    }
+
+    @include viewport(medium) {
+        width: 650px;
+    }
+
+    @include viewport(small) {
+        h3 {
+            font-size: 1.5rem; 
+        }
+    }
+}
+
+#assigned-image-text {
+    text-align: center;
+}
+
+#image-fetcher-text {
+    text-align: center;
+}
+
+#select-email-text {
+    text-align: left;
+
+    @include viewport(small) {
+        text-align: center;
+    }
 }
 
 .current-email-text {

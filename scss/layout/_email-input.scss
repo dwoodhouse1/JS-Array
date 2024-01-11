@@ -2,20 +2,4 @@
 // Email Input Section
 // ==========================================================================
 
-.email-inputter {
-    display: flex;
-    flex-direction: column;
-    width: 225px;
 
-    @include viewport(x-large) {
-        width: 532px;
-    }
-
-    @include viewport(large) {
-        width: 532px;
-    }
-
-    @include viewport(medium) {
-        width: 532px;
-    }
-}

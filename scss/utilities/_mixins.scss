@@ -37,3 +37,14 @@
 
     
 }
+
+
+// Content Containers
+
+@mixin contentContainer() {
+    padding: 1rem;
+    margin: 1rem;
+    border: 3px solid black;
+    border-radius: 6px;
+    background-color: #dfd2d4;
+}
