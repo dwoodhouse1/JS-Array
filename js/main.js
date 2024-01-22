@@ -1,6 +1,6 @@
 const btnOpen = document.getElementById("btn_open-content");
 
-$(".page-heading, .page-subheading-one, .page-subheading-two, .page-subheading-three, .page-subheading-four, #easter-egg, .button-open, .content-container").hide();
+$(".page-heading, .page-subheading-one, .page-subheading-two, .page-subheading-three, .page-subheading-four, .button-open, .content-container").hide();
 
 $(document).ready(function() {
     $(".page-heading").delay(100).fadeIn("slow");
@@ -18,13 +18,5 @@ function showContent() {
         $(".button-open").fadeOut("slow");
         $(".content-container").fadeIn("slow");
     })
-}
-
-function showEasterEgg() {
-    $("#easter-egg").fadeIn("slow");
-}
-
-function hideEasterEgg() {
-    $("#easter-egg").fadeOut("slow");
 }
 
