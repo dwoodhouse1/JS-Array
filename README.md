@@ -7,3 +7,8 @@ Submission #2 - Changes
 - Aligned h2 and h3 tags to center (except the "Select an email address" text, this aligns left on screen sizes other than mobile).
 - Aligned "Add Email" and "Add Current Image" button to center on mobile, and left on screen sizes bigger than mobile.
 - Various paddings / margins added for more space between elements.
+
+
+Submission #3 - Changes
+
+- Removed the Meerkat the functionality behind it (goodbye old friend).
