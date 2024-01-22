@@ -11,4 +11,4 @@ Submission #2 - Changes
 
 Submission #3 - Changes
 
-- Removed the Meerkat the functionality behind it (goodbye old friend).
+- Removed the Meerkat image and the functionality behind it (goodbye old friend).
